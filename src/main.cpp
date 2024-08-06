@@ -78,7 +78,7 @@ void render_text(SDL_Renderer* ren, int x, int y, std::string str, SDL_Color col
             SDL_RenderCopy(ren, font_charset, &src, &dest);
             dest.x += font_width;
         }
-    }
+    }a
 }
 
 void init_all(int argc, char** argv)
