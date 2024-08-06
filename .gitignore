@@ -2,3 +2,5 @@
 *.bat
 *.dll
 *.exe
+convert.py
+pong.txt
