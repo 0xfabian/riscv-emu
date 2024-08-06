@@ -247,9 +247,15 @@ void render_memory(int x, int y, int offset)
 
 void render_instruction(int x, int y)
 {
-    uint32_t inst = *((uint32_t*)(memory + cpu.pc));
+    for (int i = -2; i <= 2; i++)
+    {
+        int address = cpu.pc + i * sizeof(uint32_t);
 
-    render_text(ren, x, y, cpu.disassemble(inst), WHITE);
+        if (address < 0 || address >= MEMORY_SIZE)
+            continue;
+
+        render_text(ren, x, y + (i + 2) * font_height, cpu.disassemble(*((uint32_t*)&memory[address])), i == 0 ? (SDL_Color)WHITE : (SDL_Color) { 128, 128, 128 });
+    }
 }
 
 void render_screen(SDL_Rect* screen)
@@ -366,13 +372,13 @@ int main(int argc, char** argv)
         else
         {
             screen.x = 750;
-            screen.y = 520;
+            screen.y = 16 + (17 + 1 + 5 + 1) * font_height;
             screen.w = FB_WIDTH * 8;
             screen.h = FB_HEIGHT * 8;
 
-            render_registers(750, 32);
+            render_registers(750, 16);
             render_memory(32, 16, memory_view);
-            render_instruction(750, 470);
+            render_instruction(750, 16 + (17 + 1) * font_height);
         }
 
         render_screen(&screen);
