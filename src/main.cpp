@@ -13,6 +13,7 @@
 #define FB_HEIGHT           16
 
 #define WHITE       { 255, 255, 255 }
+#define GREY        { 128, 128, 128 }
 #define YELLOW      { 255, 255, 0 }
 #define SP_COLOR    { 0, 212, 92 }
 #define PC_COLOR    { 7, 77, 181 }
@@ -254,7 +255,12 @@ void render_instruction(int x, int y)
         if (address < 0 || address >= MEMORY_SIZE)
             continue;
 
-        render_text(ren, x, y + (i + 2) * font_height, cpu.disassemble(*((uint32_t*)&memory[address])), i == 0 ? (SDL_Color)WHITE : (SDL_Color) { 128, 128, 128 });
+        SDL_Color col = GREY;
+
+        if (i == 0)
+            col = WHITE;
+
+        render_text(ren, x, y + (i + 2) * font_height, cpu.disassemble(*((uint32_t*)&memory[address])), col);
     }
 }
 
