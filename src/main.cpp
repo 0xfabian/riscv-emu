@@ -40,7 +40,7 @@ char charset[] = { " !\"#$%&'()*+,-./0123456789:; = ?@ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 void generate_charset(SDL_Renderer* ren)
 {
-    SDL_Surface* text_surface = TTF_RenderText_Blended(font, charset, { 255, 255, 255 });
+    SDL_Surface* text_surface = TTF_RenderText_Blended(font, charset, WHITE);
     font_charset = SDL_CreateTextureFromSurface(ren, text_surface);
 
     SDL_FreeSurface(text_surface);
