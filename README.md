@@ -14,10 +14,10 @@
 
 Below are GIFs showing the **Pong** and **Snake** games running on the emulator, demonstrating the real-time memory and screen mapping:
 
-### Pong Game
+### Pong
 ![Pong Game](gifs/pong.gif)
 
-### Snake Game
+### Snake
 ![Snake Game](gifs/snake.gif)
 
 The emulator not only runs the programs but also maps part of memory to the screen, allowing for graphical output to be displayed and interacted with.
