@@ -1,6 +1,6 @@
 # RISC-V Emulator
 
-**RISC-V Emulator** is an interactive environment for running and visualizing RISC-V programs. It allows you to load RISC-V code, see its memory layout, inspect registers, and step through instructions. A portion of memory is mapped to the screen, and you can view the graphical output in real-time.
+This is an interactive environment for running and visualizing RISC-V programs. It allows you to load RISC-V code, see its memory layout, inspect registers, and step through instructions. A portion of memory is mapped to the screen, and you can view the graphical output in real-time.
 
 ## Features
 
