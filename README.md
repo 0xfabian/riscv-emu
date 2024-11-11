@@ -10,7 +10,7 @@ This is an interactive environment for running and visualizing RISC-V programs. 
 - **Step/Auto-Step Mode**: Step through the program manually or run automatically to observe execution.
 - **Screen Mapping**: A region of memory is mapped to the screen, allowing you to see graphical output.
 
-## Examples
+## Showcase
 
 ### Pong
 ![Pong Game](gifs/pong.gif)
