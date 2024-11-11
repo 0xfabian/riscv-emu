@@ -9,18 +9,12 @@ This is an interactive environment for running and visualizing RISC-V programs. 
 - **Register Inspection**: See the current state of RISC-V registers during execution.
 - **Step/Auto-Step Mode**: Step through the program manually or run automatically to observe execution.
 - **Screen Mapping**: A region of memory is mapped to the screen, allowing you to see graphical output.
-  
-## Example
-
-Below are GIFs showing the **Pong** and **Snake** games running on the emulator, demonstrating the real-time memory and screen mapping:
 
 ### Pong
 ![Pong Game](gifs/pong.gif)
 
 ### Snake
 ![Snake Game](gifs/snake.gif)
-
-The emulator not only runs the programs but also maps part of memory to the screen, allowing for graphical output to be displayed and interacted with.
 
 ## Dependencies
 
