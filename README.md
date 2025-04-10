@@ -18,6 +18,13 @@ This is an interactive environment for running and visualizing RISC-V programs. 
 ### Snake
 ![Snake Game](gifs/snake.gif)
 
+## How to build
+
+Make sure you have **SDL2** and **SDL2_ttf** installed, then simply run:
+```
+g++ -o riscv-emu src/*.cpp -Iinclude -lSDL2main -lSDL2 -lSDL2_ttf -O2
+```
+
 ## Dependencies
 
 - **[SDL2](https://www.libsdl.org/)** - Manages windowing, input, and graphics rendering.
